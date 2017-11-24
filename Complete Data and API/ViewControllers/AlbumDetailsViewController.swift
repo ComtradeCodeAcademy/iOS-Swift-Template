@@ -42,9 +42,10 @@ class AlbumDetailsViewController: UIViewController {
             
             // load cover image for album
             // this is defined in extension of UIImageView
-            self.albumCoverImgView.imageFromServerURL(urlString: album?.value(forKeyPath: "image") as! String, defaultImage: "artistDefaultImage")
+            if let image = album?.value(forKeyPath: "image") as? String {
+            self.albumCoverImgView.imageFromServerURL(urlString: image, defaultImage: "artistDefaultImage")
         }
-        
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

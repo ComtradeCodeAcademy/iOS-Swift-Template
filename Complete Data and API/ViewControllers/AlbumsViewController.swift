@@ -119,8 +119,9 @@ class AlbumsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // this is method from UIImageView extension
         // we load image from remote source thanks to this additional method we created
-        cell.imageView?.imageFromServerURL(urlString: album?.value(forKeyPath: "thumbnail") as! String, defaultImage: nil)
-        
+        if let thumb = album?.value(forKeyPath: "thumbnail") as? String {
+        cell.imageView?.imageFromServerURL(urlString: thumb, defaultImage: nil)
+        }
         return cell
     }
     // return cell height
