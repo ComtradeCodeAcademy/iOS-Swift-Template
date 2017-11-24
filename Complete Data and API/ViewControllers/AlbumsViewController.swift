@@ -236,7 +236,7 @@ class AlbumsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.present(alertController, animated: true, completion: nil)
     }
     
-    // MARK: - Nagivation
+    // MARK: - Navigation
     // here we are preparing what data we will need to transfer to other controllers, based on name we add to each segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch(segue.identifier!){
