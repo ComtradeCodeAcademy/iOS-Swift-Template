@@ -24,8 +24,7 @@ class AlbumDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
+        // Set default title of ViewController
         self.title = "Album Details"
     }
 
@@ -34,12 +33,16 @@ class AlbumDetailsViewController: UIViewController {
         
         if nil !== self.album {
             
+            // fill album details we got from previous ViewController
             self.titleLbl.text = album.title
             self.authorLbl.text = album.artist
             
+            // refresh title
             self.title = album.title
             
-            self.albumCoverImgView.imageFromServerURL(urlString: album?.value(forKeyPath: "image") as! String, defaultImage: nil)
+            // load cover image for album
+            // this is defined in extension of UIImageView
+            self.albumCoverImgView.imageFromServerURL(urlString: album?.value(forKeyPath: "image") as! String, defaultImage: "artistDefaultImage")
         }
         
     }
