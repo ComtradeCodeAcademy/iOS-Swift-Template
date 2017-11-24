@@ -34,6 +34,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Base API URL</key>
+	<string>https://rallycoding.herokuapp.com/api/</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>albumsAPI</key>
+			<string>https://rallycoding.herokuapp.com</string>
+			<key>imgur</key>
+			<string>https://i.imgur.com</string>
+			<key>amazonImages</key>
+			<string>https://images-na.ssl-images-amazon.com</string>
+		</dict>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
